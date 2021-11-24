@@ -16,7 +16,7 @@
   <description>Core CQRS components for the Java Stacks solution</description>
 
   <properties>
-    <stacks.core.commons.version>0.0.24-main</stacks.core.commons.version>
+    <stacks.core.commons.version>0.0.26-SNAPSHOT</stacks.core.commons.version>
   </properties>
 
   <repositories>
