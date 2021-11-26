@@ -7,7 +7,7 @@
   <parent>
     <groupId>com.amido.stacks.modules</groupId>
     <artifactId>stacks-modules-parent</artifactId>
-    <version>0.0.21-main</version>
+    <version>1.0.0</version>
   </parent>
 
   <artifactId>stacks-core-cqrs</artifactId>
@@ -16,7 +16,7 @@
   <description>Core CQRS components for the Java Stacks solution</description>
 
   <properties>
-    <stacks.core.commons.version>0.0.24-main</stacks.core.commons.version>
+    <stacks.core.commons.version>1.0.0</stacks.core.commons.version>
   </properties>
 
   <repositories>

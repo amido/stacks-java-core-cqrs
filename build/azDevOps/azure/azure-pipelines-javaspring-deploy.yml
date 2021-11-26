@@ -25,8 +25,7 @@ resources:
     - repository: templates
       type: github
       name: amido/stacks-pipeline-templates
-      # ref: maven-install-for-modules
-      ref: feature/java-modules-templates
+      ref: feature/cycle4
       # EXCHANGE THIS FOR YOUR OWN ENDPOINT CONNECTION TO GITHUB
       # REPOSITORY IS PUBLIC
       endpoint: amidostacks
@@ -88,7 +87,7 @@ stages:
               maven_cache_directory: "${{ variables.maven_cache_directory }}"
               maven_surefire_reports_dir: "${{ variables.maven_surefire_reports_dir }}"
               maven_allowed_test_tags: "${{ variables.maven_allowed_test_tags}}"
-              maven_package_version: "${{ variables.docker_image_tag }}"
+              maven_package_version: "${{ variables.maven_package_version }}"
               maven_settings_file: "${{ variables.maven_settings_file }}"
               # Artifactory
               artifactory_username: "$(artifactory-username)"
@@ -178,7 +177,7 @@ stages:
               maven_cache_directory: "${{ variables.maven_cache_directory }}"
               maven_surefire_reports_dir: "${{ variables.maven_surefire_reports_dir }}"
               maven_allowed_test_tags: "${{ variables.maven_allowed_test_tags}}"
-              maven_package_version: "${{ variables.docker_image_tag }}"
+              maven_package_version: "${{ variables.maven_package_version }}"
               maven_pom_file: "${{ variables.maven_archetype_pom_file }}"
               maven_archetype_properties_file: "${{ variables.maven_archetype_properties_file }}"
               maven_settings_file: "${{ variables.maven_settings_file }}"
