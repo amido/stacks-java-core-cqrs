@@ -64,11 +64,6 @@ stages:
 
           - checkout: templates
 
-          # Updates the build number in Azure DevOps (requires refresh in the UI to see)
-          - bash: |
-              echo '##vso[Build.UpdateBuildNumber]${{ variables.docker_image_tag }}'
-            displayName: 'Update: Build Number'
-
           # Validates all YAML files in the repo to check they adhere to standards
           - template: azDevOps/azure/templates/steps/java/test-validate-yaml.yml@templates
             parameters:
@@ -153,11 +148,6 @@ stages:
           - checkout: self
 
           - checkout: templates
-
-          # Updates the build number in Azure DevOps (requires refresh in the UI to see)
-          - bash: |
-              echo '##vso[Build.UpdateBuildNumber]${{ variables.docker_image_tag }}'
-            displayName: 'Update: Build Number'
 
           # Validates all YAML files in the repo to check they adhere to standards
           - template: azDevOps/azure/templates/steps/java/test-validate-yaml.yml@templates
