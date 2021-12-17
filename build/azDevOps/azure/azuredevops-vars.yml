@@ -46,7 +46,7 @@ variables:
   - name: self_pipeline_templates_dir
     value: "$(self_pipeline_repo)/templates"
 
- # Versioning
+  # Versioning
   - name: version_major
     value: 1
   - name: version_minor
