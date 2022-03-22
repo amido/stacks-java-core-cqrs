@@ -92,6 +92,7 @@ stages:
               # Vulnerability Scanning
               vulnerability_scan: "${{ variables.vulnerability_scan }}"
               vulnerability_scan_fail_build_on_detection: "${{ variables.vulnerability_scan_fail_build_on_detection }}"
+              vulnerability_scan_report: "${{ variables.vulnerability_scan_report }}"
               project_type: "${{ variables.java_project_type }}"
               build_type: "${{ variables.build_type }}"
               # private  key id  to sign doc
