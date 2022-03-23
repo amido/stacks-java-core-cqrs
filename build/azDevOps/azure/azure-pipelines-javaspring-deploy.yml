@@ -132,12 +132,13 @@ stages:
               build_file: false
               build_file_path: "${{ variables.build_artifact_deploy_path }}"
               build_file_artefact_name: "${{ variables.build_artifact_deploy_name }}"
+              # Docker
+              docker_build_container: "${{ variables.docker_java_image }}"
               # Functional tests
               functional_test: ${{ variables.functional_test }}
               functional_test_artefact_name: "${{ variables.functional_test_artefact_name }}"
               functional_test_artefact_path: "${{ variables.functional_test_artefact_path }}"
               vulnerability_scan: "${{ variables.vulnerability_scan }}"
-              vulnerability_scan_report: "${{ variables.vulnerability_scan_report }}"
               java_project_type: "${{ variables.java_project_type }}"
               functional_test_project_type: "${{ variables.functional_test_project_type }}"
               # Coverage test
@@ -179,8 +180,6 @@ stages:
               # OSSRH
               ossrh_jira_id: "$(ossrh-jira-id)"
               ossrh_jira_password: "$(ossrh-jira-password)"
-              # Docker
-              docker_build_container: "${{ variables.docker_java_image }}"
               # Vulnerability Scanning
               vulnerability_scan: "${{ variables.vulnerability_scan }}"
               vulnerability_scan_fail_build_on_detection: "${{ variables.vulnerability_scan_fail_build_on_detection }}"
